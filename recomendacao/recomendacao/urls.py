@@ -17,8 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from app import views
 from django.urls import path, include
-
-
 urlpatterns = [
     #path('', redirect('recomendacao/' permanent = True)),
     path('admin/', admin.site.urls),
@@ -28,3 +26,4 @@ urlpatterns = [
     path("cadastroRM/", views.cadastroRM, name='cadastroRM'),
 
  ]
+
