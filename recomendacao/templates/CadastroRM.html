@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<style> </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Recomendação do  Imóvel</title>
+	<link rel="stylesheet" href="{% static 'css/Tela.css' %}">
+
+</head>
+<body>
+	<header>
+		<h1>Formulário de Recomendação do  Imóvel</h1>
+	</header>
+    <br>
+	<main>
+		<form action="#" method="post">
+			<fieldset>
+				<legend>Informações da Recomendacao do Imóvel</legend>
+				<label for="tipoImovel">Tipo de Imóvel:</label>
+				<input type="text" id="tipoImovel" name="tipoImovel" placeholder="ex: Casa, Kitnet, ..."required>
+
+				<label for="logradouro">Logradouro:</label>
+				<input type="text" id="logradouro" name="logradouro" placeholder="ex: Travessa Tatajuba entre Edmundo Tork"required>
+
+				<label for="numero">Número:</label>
+				<input type="text" id="numero" name="numero" placeholder="numero da casa ex: 933" required>
+<br> <br>
+				<label for="bairro">Bairro:</label>
+				<input type="text" id="bairro" name="bairro" placeholder="Tatajuba "required>
+
+				<label for="cidade">Cidade:</label>
+				<input type="text" id="cidade" name="cidade" placeholder="Capitão Poço"required>
+
+				<label for="estado">Estado:</label>
+				<input type="text" id="estado" name="estado" placeholder="Pará"required>
+<br> <br>
+				<label for="cep">CEP:</label>
+				<input type="text" id="cep" name="cep" placeholder="68650-000"required>
+
+				<label for="valorAluguel">Valor do Aluguel Mensal:</label>
+				<input type="number" id="valorAluguel" name="valorAluguel" placeholder="500 reias"required>
+
+				<label for="quantidadeQuartos">Quantidade de Quartos:</label>
+				<input type="number" id="quantidadeQuartos" name="quantidadeQuartos"   required>
+<br> <br>
+				<label for="quantidadeBanheiros">Quantidade de Banheiros:</label>
+				<input type="number" id="quantidadeBanheiros" name="quantidadeBanheiros" required>
+
+
+
+				<label for="areaTotal">Área Total do Imóvel (em m²):</label>
+				<input type="number" id="areaTotal" name="areaTotal"  >
+				<br> <br>
+				<label for="descricao">Descrição Detalhada do Imóvel:</label>
+				<textarea id="descricao" name="descricao" placeholder="ex: Casa com dois quartos, não paga conta de agua, casa bem cuidada, paga energia, internet, casa com segurança para morar "rows="5" required></textarea>
+
+				<label for="fotos">Fotos do Imóvel:</label>
+				<input type="file" id="fotos" name="fotos" multiple>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Informações do Proprietário</legend>
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" required>
+
+				<label for="telefone">Telefone:</label>
+				<input type="text" id="telefone" name="telefone" required>
+
+			</fieldset>
+
+			<input type="submit" value="Enviar">
+		</form>
+	</main>
+</body>
+</html>

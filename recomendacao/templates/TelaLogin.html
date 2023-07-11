@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TelaLogin</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+    <br>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'imagens/logo.png' %}" width="200">
+        </div>
+        <h1>TemVagas</h1>
+        <h2>Login</h2>
+        <p>Email</p>
+        <input type="text" placeholder="Digite seu E-mail">
+        <br>
+        <p>Senha</p>
+        <input type="password" placeholder="Digite sua Senha">
+        <br><br>
+        <button>Continuar</button>
+        <br>
+        <h3>Não tem uma Conta? <button><u>Cadastre-se</u></button></h3>
+    </div>
+</body>
+
+</html>

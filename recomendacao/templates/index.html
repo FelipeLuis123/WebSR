@@ -1,11 +1,68 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/principal.css' %}">
 </head>
-<body>
-<h1> oi</h1>
-</body>
+ <body>
+    <div class="header">
+      <h1> TemVagas</h1>
+      <nav>
+        <a href=" ">Anunciar Recomendacao</a>
+        <div class="dropdown" >
+        <a href="#">|||</a>
+        <div class="dropdown-content">
+          <a href=" ">Configurações</a>
+          <a href=" ">Quem Somos Nós</a>
+          <a href=" ">Sair</a>
+        </div>
 
-</html>
+        </div>
+
+      </nav>
+    </div>
+    <div class="search-container">
+      <input type="text" placeholder="Cidade, Bairro, Rua">
+      <select>
+        <option value="all">Todas as opções</option>
+        <option value="kitnet">Kitnet</option>
+        <option value="casa">Casa</option>
+      </select>
+
+
+      <button>Pesquisar</button>
+    </div>
+    <div class="advertise">
+      <p> Encontre aqui a sua próxima moradia. São diversas opções de Recomendação.</p>
+    </div>
+    <br><br><br>
+      <div class="properties">
+        <h2>Recomendação em Destaque</h2>
+        <div class="property-row">
+          <div class="property">
+            <img src="https://via.placeholder.com/150" alt="Imagem do Imóvel">
+            <h3>Nome do Imóvel</h3>
+            <p>Endereço do Imóvel</p>
+            <p>Preço do Imóvel</p>
+            <button>Ver mais</button>
+          </div>
+          <div class="property">
+            <img src="https://via.placeholder.com/150" alt="Imagem do Imóvel">
+            <h3>Nome do Imóvel</h3>
+            <p>Endereço do Imóvel</p>
+            <p>Preço do Imóvel</p>
+            <button>Ver mais</button>
+          </div>
+          <div class="property">
+            <img src="https://via.placeholder.com/150" alt="Imagem do Imóvel">
+            <h3>Nome do Imóvel</h3>
+            <p>Endereço do Imóvel</p>
+            <p>Preço do Imóvel</p>
+            <button>Ver mais</button>
+          </div>
+
+        </div>
+      </div>
+ <html>
