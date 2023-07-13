@@ -7,4 +7,5 @@ urlpatterns = [
     path('login', views.login, name='login'),
     path('cadastro', views.cadastro, name='cadastro'),
     path('cadastroRM', views.cadastroRM, name='cadastroRM'),
+    path('TelaPrincipal', views.TelaPrincipal, name='TelaPrincipal'),
 ]

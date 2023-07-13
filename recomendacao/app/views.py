@@ -5,7 +5,6 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'index.html')
 
-
 def login(request):
     return render(request, 'TelaLogin.html')
 
@@ -14,3 +13,6 @@ def cadastro(request):
 
 def cadastroRM(request):
     return render(request, 'CadastroRM.html')
+
+def TelaPrincipal(request):
+    return render(request, 'TelaPrincipal.html')
