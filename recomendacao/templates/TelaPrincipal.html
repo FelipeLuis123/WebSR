@@ -20,17 +20,17 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-        <!-- Navigation-->
+        <!-- cabeçalho-->
         <nav class="navbar navbar-light bg-body-secondary static-top">
             <div class="container">
-                <a class="navbar-brand" href="{% url 'cadastro' %}">
+                <a class="navbar-brand" href="#">
                     <img src="{% static 'imagens/Logo.png' %}" width="100">
                 </a>
                     <form class="form-inline my-2 my-lg-0">
                     <input class="form-control w-100 p-3 shadow p-3 mb-2 bg-body-tertiary rounded " type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                     <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button> -->
                   </form>
-                <a class="navbar-brand btn btn-warning text-warning-emphasis" href="{% url 'cadastroRM' %}">Recomende aqui</a>
+                <a class="navbar-brand btn btn-warning text-warning-emphasis " href="{% url 'cadastroRM' %}">Recomende aqui</a>
                 <nav class="navbar bg-body-tertiary">
                     <!-- icone de busca -->
                     <div class="container-fluid ">
@@ -63,14 +63,10 @@
                     <div class="col-xl-6">
                         <div class="text-center text-light">
                             <!-- Page heading-->
+
+                            <!--Coloca aquele rolador de paginas aqui-->
                             <h1 class="mb-5">Generate more leads with a professional landing page!</h1>
                             <!-- Signup form-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
                             <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
                                 <!-- Email address input-->
@@ -99,16 +95,49 @@
             </div>
         </header>
         <!-- Icons Grid-->
-        colocar aqui o corpo do site
-        <br>
-                colocar aqui o corpo do site
-        <br>
-        colocar aqui o corpo do site
-        <br>
-        colocar aqui o corpo do site
-        <br>
-        colocar aqui o corpo do site
 
+        <div class="properties">
+        <h2>Recomendação em Destaque</h2>
+        <div class="container row  justify-content-around">
+          <div class="row justify-content-center card col-xs-6 col-md-2 col-sm">
+  <div>
+      <img src="{% static 'imagens/casa1.jpg'%}" class="card-img-top" width="100">
+
+  <div class="card-body">
+    <h5 class="card-title">R$ 400</h5>
+    <p class="card-text col-7">Dois Quartos Uma Sala Uma Cozinha</p>
+    <a href="#" class="btn btn-primary">+ Ver mais</a>
+  </div>
+</div>
+  </div>
+            <div class="row col-sm">
+                <div class="row justify-content-center card col-xs-6 col-md-2">
+  <div >
+      <img src="{% static 'imagens/casa2.jpg'%}" class="card-img-top" width="100">
+
+  <div class="card-body">
+    <h5 class="card-title">R$ 400</h5>
+    <p class="card-text col-7">Dois Quartos Uma Sala Uma Cozinha</p>
+    <a href="#" class="btn btn-primary">+ Ver mais</a>
+  </div>
+</div>
+  </div>
+            </div>
+    </div>
+          <div class="property">
+            <img src="https://via.placeholder.com/150" alt="Imagem do Imóvel">
+            <h3>Nome do Imóvel</h3>
+            <p>Endereço do Imóvel</p>
+            <p>Preço do Imóvel</p>
+            <button>Ver mais</button>
+          </div>
+          <div class="property">
+            <img src="https://via.placeholder.com/150" alt="Imagem do Imóvel">
+            <h3>Nome do Imóvel</h3>
+            <p>Endereço do Imóvel</p>
+            <p>Preço do Imóvel</p>
+            <button>Ver mais</button>
+          </div>
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">
