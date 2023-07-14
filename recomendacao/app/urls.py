@@ -3,9 +3,10 @@ from django.urls import path
 
 from . import views
 urlpatterns = [
-    path('', views.home, name = 'home'),
+    path('', views.login, name = 'login'),
     path('login', views.login, name='login'),
     path('cadastro', views.cadastro, name='cadastro'),
-    path('cadastroRM', views.cadastroRM, name='cadastroRM'),
-    path('TelaPrincipal', views.TelaPrincipal, name='TelaPrincipal'),
+    path('principal', views.principal, name='principal'),
+    path('cadrm', views.cadrm, name='cadrm'),
+
 ]

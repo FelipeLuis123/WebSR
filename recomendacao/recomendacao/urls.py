@@ -20,11 +20,8 @@ from django.urls import path, include
 urlpatterns = [
     #path('', redirect('recomendacao/' permanent = True)),
     path('admin/', admin.site.urls),
-    path('SistemadeRecomendacao/', include('app.urls')),
-    path("login/", views.login, name='login'),
-    path("cadastro/", views.cadastro, name='cadastro'),
-    path("cadastroRM/", views.cadastroRM, name='cadastroRM'),
-    path("TelaPrincipal/", views.TelaPrincipal, name='TelaPrincipal'),
+    path('', include('app.urls')),
+
 
  ]
 
