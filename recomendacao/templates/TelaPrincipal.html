@@ -40,7 +40,7 @@
                      <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                            <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="#">Usuário</a>
+                              <a class="nav-link active" aria-current="page" href="{% url 'autor' %}">Usuarios</a>
                            </li>
                            <li class="nav-item">
                               <a class="nav-link" href="#">Quem somos nós</a>
@@ -83,6 +83,7 @@
          <span class="visually-hidden">Next</span>
          </button>
       </div>
+
       <!-- Icons Grid-->
       <div class="properties bg-body-secondary">
       <br><br>
@@ -186,6 +187,14 @@
             </div>
          </div>
       </footer>
+
+<script>
+   var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleIndicators'), {
+      interval: 5000  // Defina o intervalo em milissegundos para a rolagem automática (por exemplo, 3000 = 3 segundos)
+   });
+   myCarousel.cycle();
+</script>
+
       <!-- Bootstrap core JS-->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
       <!-- Core theme JS-->
@@ -195,5 +204,8 @@
       <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
       <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
       <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
    </body>
+
 </html>

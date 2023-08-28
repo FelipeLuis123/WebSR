@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-body">
+            <h4>USUARIOS</h4>
+            <hr>
+            <a class="btn btn-success" href="{% url 'autor_add' %}">Adicionar</a>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Curso</th>
+                        <th>Telefone</th>
+                        <th>Cpf</th>
+                        <th>Matricula</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for autor in autores %}
+                    <tr>
+                        <td>{{ autor.Nome }}</td>
+                        <td>{{ autor.Email }}</td>
+                        <td>{{ autor.Curso }}</td>
+                        <td>{{ autor.Telefone }}</td>
+                        <td>{{ autor.Cpf }}</td>
+                        <td>{{ autor.Matricula }}</td>
+
+
+                        <td>
+                            <a class="btn btn-warning" href="{% url 'autor_edit' autor.id %}">Editar</a>
+                            <a class="btn btn-danger" href="{% url 'autor_delete' autor.id %}">Excluir</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

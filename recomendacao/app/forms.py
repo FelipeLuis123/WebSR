@@ -1,8 +1,19 @@
 from django.forms import ModelForm
 from django import forms
-from .models import Clientes
+from .models import Autor
 
-class ClienteForm(ModelForm):
+
+class AutorForm(forms.ModelForm):
     class Meta:
-        model = Clientes
-        fields = ['nome', 'cpf']
+        model = Autor
+        exclude = ()
+
+        widgets = {
+            'nome': forms.TextInput(attrs={'class': 'form-control', 'autofocus': ''}),
+            'curso': forms.TextInput(attrs={'class': 'form-control'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'telefone': forms.TextInput(attrs={'class': 'form-control'}),
+            'cpf': forms.TextInput(attrs={'class': 'form-control'}),
+            'matricula': forms.TextInput(attrs={'class': 'form-control'}),
+
+        }

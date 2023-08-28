@@ -1,8 +1,12 @@
 from django.db import models
 
+
 # Create your models here.
 
-
-class Clientes(models.Model):
-    nome = models.CharField(max_length=20)
-    cpf = models.CharField(max_length=11)
+class Autor(models.Model):
+    Nome = models.CharField(max_length=255)
+    Email = models.EmailField(null=True, blank=True)
+    Curso = models.CharField(max_length=50)
+    Telefone = models.CharField(max_length=50, )
+    Cpf = models.CharField(max_length=11, )
+    Matricula = models.CharField(max_length=50, )
