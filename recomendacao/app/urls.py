@@ -20,6 +20,7 @@ urlpatterns = [
     path('autor/', views.autor, name='autor'),
     path('recomendacao/autor/edit/<int:autor_pk>/', views.autor_edit, name='autor_edit'),
     path('autor/delete/<int:autor_pk>', views.autor_delete, name='autor_delete'),
+    path('ajuste-fonte/', views.ajuste_fonte, name='ajuste_fonte'),
 
 
 

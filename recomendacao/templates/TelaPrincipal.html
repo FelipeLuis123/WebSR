@@ -19,6 +19,14 @@
       <link href="css/styles.css" rel="stylesheet" />
    </head>
    <body>
+   <button onclick="aumentarFonte()">A+</button>
+<button onclick="diminuirFonte()">A-</button>
+<style>
+  body {
+    font-size: 16px; /* Defina o tamanho da fonte inicial */
+  }
+</style>
+
       <!-- cabeçalho-->
       <nav class="navbar navbar-light bg-body-secondary static-top">
          <div class="container">
@@ -204,6 +212,27 @@
       <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
       <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
       <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+<script>
+  function aumentarFonte() {
+    var elementosDeTexto = document.querySelectorAll("body *");
+    elementosDeTexto.forEach(function(elemento) {
+      var tamanhoFonte = window.getComputedStyle(elemento, null).getPropertyValue('font-size');
+      var novoTamanho = parseInt(tamanhoFonte) + 2;
+      elemento.style.fontSize = novoTamanho + "px";
+    });
+  }
+
+  function diminuirFonte() {
+    var elementosDeTexto = document.querySelectorAll("body *");
+    elementosDeTexto.forEach(function(elemento) {
+      var tamanhoFonte = window.getComputedStyle(elemento, null).getPropertyValue('font-size');
+      var novoTamanho = parseInt(tamanhoFonte) - 2;
+      elemento.style.fontSize = novoTamanho + "px";
+    });
+  }
+</script>
+
+
 
 
    </body>

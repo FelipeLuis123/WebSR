@@ -31,7 +31,9 @@
 
                         <td>
                             <a class="btn btn-warning" href="{% url 'autor_edit' autor.id %}">Editar</a>
-                            <a class="btn btn-danger" href="{% url 'autor_delete' autor.id %}">Excluir</a>
+                            <a class="btn btn-danger" href="{% url 'autor_delete' autor.id %}"
+                            onclick = "return confirm('Tem certeza que deseja excluir?')" >Excluir</a>
+
                         </td>
                     </tr>
                     {% endfor %}

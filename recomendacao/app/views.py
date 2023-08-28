@@ -68,4 +68,9 @@ def autor_delete(request, autor_pk):
     autor.delete()
 
     return redirect('autor')
+from django.shortcuts import render
+
+def ajuste_fonte(request):
+    return render(request, 'font_size_adjust.html')
+
 
