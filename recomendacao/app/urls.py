@@ -12,15 +12,15 @@ router.register(r'autor', AutorFormSets, basename="Autor")
 
 urlpatterns = [
     path('', views.login, name='login'),
-    path('login', views.login, name='login'),
-    path('cadastro', views.cadastro, name='cadastro'),
-    path('principal', views.principal, name='principal'),
-    path('cadrm', views.cadrm, name='cadrm'),
-    path('autor/add', views.autor_add, name='autor_add'),
-    path('autor/', views.autor, name='autor'),
-    path('recomendacao/autor/edit/<int:autor_pk>/', views.autor_edit, name='autor_edit'),
-    path('autor/delete/<int:autor_pk>', views.autor_delete, name='autor_delete'),
-    path('ajuste-fonte/', views.ajuste_fonte, name='ajuste_fonte'),
+    path('/recomendacao/login', views.login, name='login'),
+    path('/recomendacao/cadastro', views.cadastro, name='cadastro'),
+    path('/recomendacao/principal', views.principal, name='principal'),
+    path('/recomendacao/cadrm', views.cadrm, name='cadrm'),
+    path('/recomendacao/autor/add', views.autor_add, name='autor_add'),
+    path('/recomendacao/autor/', views.autor, name='autor'),
+    path('/recomendacao/autor/edit/<int:autor_pk>/', views.autor_edit, name='autor_edit'),
+    path('/recomendacao/autor/delete/<int:autor_pk>', views.autor_delete, name='autor_delete'),
+    path('/recomendacao/ajuste-fonte/', views.ajuste_fonte, name='ajuste_fonte'),
 
 
 

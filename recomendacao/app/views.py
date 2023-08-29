@@ -10,6 +10,8 @@ from .models import Autor
 def login(request):
     return render(request, 'TelaLogin.html')
 
+def Tlogin(request):
+    return render( redirect, 'TelaLogin.html')
 
 def cadastro(request):
     return render(request, 'CadastroUsuario.html')
