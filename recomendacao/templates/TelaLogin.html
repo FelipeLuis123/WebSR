@@ -1,18 +1,22 @@
 {% load static %}
 
 <!DOCTYPE html>
-
 <html lang="pt-br">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 <head>
     <meta charset="UTF-8">
     <title>TelaLogin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-    <br>
 <body>
-
+    <button onclick="aumentarFonte()">A+</button>
+    <button onclick="diminuirFonte()">A-</button>
+<style>
+  body {
+    font-size: 16px; /* Defina o tamanho da fonte inicial */
+  }
+</style>
     <div class="container">
         <div class="logo">
             <img src="{% static 'imagens/logo.png' %}" width="200">
@@ -25,8 +29,7 @@
         <p>Senha</p>
         <input type="password" placeholder="Digite sua Senha">
         <br><br>
-        <!--<button class="btn btn-success"> Continuar </button> -->
-         <buttom><a class="btn btn-success" href="{% url 'principal'%}">Continuar</a></buttom>
+        <a class="btn btn-success" href="{% url 'principal'%}">Continuar</a></button>
 
         <br> <br>
         <h8>Não tem uma conta?</h8>
@@ -34,5 +37,23 @@
         <!--<h3>Não tem uma Conta? <button><u>Cadastre-se</u></button></h3>-->
     </div>
 </body>
-
 </html>
+<script>
+  function aumentarFonte() {
+    var elementosDeTexto = document.querySelectorAll("body *");
+    elementosDeTexto.forEach(function(elemento) {
+      var tamanhoFonte = window.getComputedStyle(elemento, null).getPropertyValue('font-size');
+      var novoTamanho = parseInt(tamanhoFonte) + 2;
+      elemento.style.fontSize = novoTamanho + "px";
+    });
+  }
+
+  function diminuirFonte() {
+    var elementosDeTexto = document.querySelectorAll("body *");
+    elementosDeTexto.forEach(function(elemento) {
+      var tamanhoFonte = window.getComputedStyle(elemento, null).getPropertyValue('font-size');
+      var novoTamanho = parseInt(tamanhoFonte) - 2;
+      elemento.style.fontSize = novoTamanho + "px";
+    });
+  }
+</script>
