@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
     <div class="card">
         <div class="card-body">
             <h4> Adicionar Usuario</h4>
@@ -10,6 +11,7 @@
                 {{ form.as_p}}
                 <button class="btn btn-success" type="submit">Salvar</button>
                 <a href="{% url 'autor' %}" class="btn btn-danger">Cancelar</a>
+
             </form>
         </div>
     </div>
