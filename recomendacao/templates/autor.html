@@ -4,7 +4,6 @@
     <div class="card">
         <div class="card-body">
             <h4 class="mb-4">Lista de Usuários</h4>
-            <a class="btn btn-success mb-3" href="{% url 'autor_add' %}">Adicionar Usuário</a>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -15,6 +14,7 @@
                             <th>Cpf</th>
                             <th>Matrícula</th>
                             <th>Curso</th>
+                            <th>Senha</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -27,12 +27,14 @@
                             <td>{{ autor.Cpf }}</td>
                             <td>{{ autor.Matricula }}</td>
                             <td>{{ autor.Curso }}</td>
-                            <td>
-                                <a class="btn btn-warning btn-sm" href="{% url 'autor_edit' autor.id %}"
-                                   onclick="return confirm('Tem certeza que deseja editar?')">Editar</a>
-                                <a class="btn btn-danger btn-sm" href="{% url 'autor_delete' autor.id %}"
-                                   onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</a>
-                            </td>
+                            <td>{{ autor.Senha }}</td>
+                        <td>
+                            <a class="btn btn-warning btn-sm" href="{% url 'autor_edit' autor.id %}"
+                               onclick="return confirm('Tem certeza que deseja editar {{ autor.Nome }}?')">Editar</a>
+                            <a class="btn btn-danger btn-sm" href="{% url 'autor_delete' autor.id %}"
+                               onclick="return confirm('Tem certeza que deseja excluir {{ autor.Nome }}?')">Excluir</a>
+                        </td>
+
                         </tr>
                         {% endfor %}
                     </tbody>

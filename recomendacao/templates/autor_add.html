@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
     <div class="card">
+        <div class="logo">
+
+            <img src="{% static 'imagens/logo.png' %}" width="200">
+        </div>
         <div class="card-body">
-            <h4> Adicionar Usuario</h4>
+            <h4> Cadastra-se</h4>
             <hr>
             <form action="{% url 'autor_add' %}" method="post">
                 {% csrf_token %}
                 {{ form.as_p}}
+                <br>
                 <button class="btn btn-success" type="submit">Salvar</button>
-                <a href="{% url 'autor' %}" class="btn btn-danger">Cancelar</a>
+                <a href="{% url 'login' %}" class="btn btn-danger">Cancelar</a>
 
             </form>
         </div>

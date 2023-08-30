@@ -35,11 +35,17 @@ form {
     margin-bottom: 20px;
 }
 
+/* Resto do seu código CSS */
+
 label {
-    display: block;
+    display: inline-block;
+    width: 12px; /* Ajuste este valor conforme necessário */
     font-weight: bold;
     margin-bottom: 5px;
 }
+
+/* Resto do seu código CSS */
+
 
 input[type="text"],
 input[type="email"],

@@ -43,7 +43,7 @@ def autor_add(request):
     if request.POST:
         if form.is_valid():
             form.save()
-            return redirect('autor' )
+            return redirect('principal' )
 
     context ={
         'form': form
