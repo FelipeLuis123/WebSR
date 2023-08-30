@@ -7,6 +7,15 @@
     <title>Tela de Cadastro TemVagas</title>
     <link rel="stylesheet" href="{% static 'css/cadastroUser.css' %}">
 </head>
+    <body>
+    	<button onclick="aumentarFonte()">A+</button>
+    	<button onclick="diminuirFonte()">A-</button>
+	<style>
+  body {
+    font-size: 16px; /* Defina o tamanho da fonte inicial */
+  }
+</style>
+<body>
 <body>
 <div id="main-container">
   <br>
@@ -59,4 +68,23 @@
 <script src="js/scripts.js"></script>
 </body>
 </html>
+<script>
+  function aumentarFonte() {
+    var elementosDeTexto = document.querySelectorAll("body *");
+    elementosDeTexto.forEach(function(elemento) {
+      var tamanhoFonte = window.getComputedStyle(elemento, null).getPropertyValue('font-size');
+      var novoTamanho = parseInt(tamanhoFonte) + 2;
+      elemento.style.fontSize = novoTamanho + "px";
+    });
+  }
+
+  function diminuirFonte() {
+    var elementosDeTexto = document.querySelectorAll("body *");
+    elementosDeTexto.forEach(function(elemento) {
+      var tamanhoFonte = window.getComputedStyle(elemento, null).getPropertyValue('font-size');
+      var novoTamanho = parseInt(tamanhoFonte) - 2;
+      elemento.style.fontSize = novoTamanho + "px";
+    });
+  }
+</script>
 {% endblock %}

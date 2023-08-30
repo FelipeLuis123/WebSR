@@ -9,6 +9,14 @@
 	<link rel="stylesheet" href="{% static 'css/CadastroRM.css' %}">
 
 </head>
+	<body>
+    	<button onclick="aumentarFonte()">A+</button>
+    	<button onclick="diminuirFonte()">A-</button>
+	<style>
+  body {
+    font-size: 16px; /* Defina o tamanho da fonte inicial */
+  }
+</style>
 <body>
 	<header>
 		<h1>Formulário de Recomendação do  Imóvel</h1>
@@ -78,3 +86,22 @@
 	</main>
 </body>
 </html>
+<script>
+  function aumentarFonte() {
+    var elementosDeTexto = document.querySelectorAll("body *");
+    elementosDeTexto.forEach(function(elemento) {
+      var tamanhoFonte = window.getComputedStyle(elemento, null).getPropertyValue('font-size');
+      var novoTamanho = parseInt(tamanhoFonte) + 2;
+      elemento.style.fontSize = novoTamanho + "px";
+    });
+  }
+
+  function diminuirFonte() {
+    var elementosDeTexto = document.querySelectorAll("body *");
+    elementosDeTexto.forEach(function(elemento) {
+      var tamanhoFonte = window.getComputedStyle(elemento, null).getPropertyValue('font-size');
+      var novoTamanho = parseInt(tamanhoFonte) - 2;
+      elemento.style.fontSize = novoTamanho + "px";
+    });
+  }
+</script>
