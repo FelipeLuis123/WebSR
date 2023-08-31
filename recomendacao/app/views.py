@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-
+from django.contrib.auth import authenticate, login
 from .forms import AutorForm
 from .models import Autor
 
@@ -8,6 +8,22 @@ from .models import Autor
 
 
 def login(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+
+        # Verifique as credenciais do usuário
+        user = authenticate(request, email=email, password=password)
+
+        if user is not None:
+            # Credenciais corretas, faça o login
+            login(request, user)
+            return redirect('principal')  # Redirecione para a página principal após o login
+        else:
+            # Credenciais incorretas, exiba uma mensagem de erro na página de login
+            error_message = "Credenciais inválidas. Por favor, verifique seu email e senha."
+            return render(request, 'login.html', {'error_message': error_message})
+
     return render(request, 'TelaLogin.html')
 
 def Tlogin(request):

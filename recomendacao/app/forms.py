@@ -29,4 +29,5 @@ class AutorForm(forms.ModelForm):
             self.add_error('Nome', 'A senha deve ter pelo menos 8 caracteres.')
 
         return cleaned_data
+    
 
