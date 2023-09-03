@@ -17,18 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
+from app import viewsets as cadastroRMViewSets
 
-from recomendacao.app.viewsets import CadastroRMViewSets
+# from recomendacao.app.viewsets import CadastroRMViewSets
 
-# Crie um roteador e registre a viewset
 route = routers.DefaultRouter()
 
-route.register(r'Casa', CadastroRMViewSets)
+route.register(r' app', cadastroRMViewSets.CadastroRMViewSets, basename="CadastroRMV")
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
-    path('api/', include(route.urls)),
+    path('app/', include(route.urls)),
+
 
 ]

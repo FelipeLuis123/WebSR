@@ -6,8 +6,9 @@ from . import views
 from .viewsets import AutorFormSets
 from .viewsets import CadastroRMViewSets
 
+
 router = routers.DefaultRouter()
-router.register(r'cadastrorm', CadastroRMViewSets, basename="Cadastrar Recomendação")
+router.register(r'cadastrorm', CadastroRMViewSets, basename="cadastrorm")
 
 
 router = routers.DefaultRouter()
@@ -24,6 +25,8 @@ urlpatterns = [
     path('recomendacao/autor/edit/<int:autor_pk>/', views.autor_edit, name='autor_edit'),
     path('recomendacao/autor/delete/<int:autor_pk>', views.autor_delete, name='autor_delete'),
     path('recomendacao/ajuste-fonte/', views.ajuste_fonte, name='ajuste_fonte'),
+    path('recomendacao/api', views.cadrm, name='cadrm'),
+
 
 
 
